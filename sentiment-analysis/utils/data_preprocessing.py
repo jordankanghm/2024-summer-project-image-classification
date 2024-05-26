@@ -1,12 +1,8 @@
 import pandas as pd
-<<<<<<< HEAD
-from sklearn.model_selection import train_test_split
-=======
 from sklearn.utils import resample
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from imblearn.over_sampling import SMOTE
->>>>>>> branch-sentiment-analysis-model-training
 
 """
 During data exploration, it was found that there was an extreme class imbalance between the positive
