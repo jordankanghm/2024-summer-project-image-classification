@@ -94,15 +94,15 @@ Train the Naive Bayes model
 """
 Train the SVM
 """
-# Create a pipeline with TF-IDF vectorizer and SVM classifier
-model = make_pipeline(TfidfVectorizer(max_features=5000), LinearSVC())
-
-# Train the model
-model.fit(X_train, y_train)
-
-# Save the trained model
-dump(model, 'svm_model.joblib')
-
-# Validate the model
-y_pred = model.predict(X_val)
-print("Test Classification Report:\n", classification_report(y_val, y_pred))
+# # Create a pipeline with TF-IDF vectorizer and SVM classifier
+# model = make_pipeline(TfidfVectorizer(max_features=5000), LinearSVC())
+#
+# # Train the model
+# model.fit(X_train, y_train)
+#
+# # Save the trained model
+# dump(model, 'svm_model.joblib')
+#
+# # Validate the model
+# y_pred = model.predict(X_val)
+# print("Test Classification Report:\n", classification_report(y_val, y_pred))

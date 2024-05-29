@@ -141,3 +141,23 @@ It can be seen that the model generally performs better on the SMOTE dataset.
 Considering all possible models and datasets, an RNN model trained on a randomly upsampled dataset
 produces the best results. Hence, we will perform hyperparameter tuning on this model.
 """
+
+"""
+The hyperparameter tuning found the following hyperparameters to produce the best results.
+The optimal embedding dimension is 256,
+the optimal number of LSTM units is 64,
+the optimal dropout rates are 0.5 and 0.30000000000000004,
+the optimal recurrent dropout rate is 0.30000000000000004,
+and the optimal learning rate is 0.0005297091719195199.
+
+The following shows the test scores obtained.
+Test Classification Report:
+               precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      4831
+           1       0.99      0.99      0.99      4862
+
+    accuracy                           0.99      9693
+   macro avg       0.99      0.99      0.99      9693
+weighted avg       0.99      0.99      0.99      9693
+"""
