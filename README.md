@@ -15,3 +15,15 @@ I decided to conduct stock price prediction using Apple's stock price data in 20
 
 Mean Squared Error: 0.02743
 R-squared: 0.9999
+
+## Amazon Product Review Sentiment Analysis
+I decided to conduct sentiment analysis on user reviews for Amazon products. The dataset consists of 34,660 reviews, with reviews ranging from 1 star to 5 stars. 1 and 2 star reviews were treated as negative reivews and 4 and 5 star reviews were treated as positive reviews. The model was trained to predict whether a given review has a positive or negative connotation. The sentiment-analysis directory shows all the work I have done, including data preprocessing, training and testing models, and hyperparameter tuning. The final model produced the following test scores. Note that '0' represents the negative class and '1' represents the positive class.
+
+               precision    recall  f1-score   support
+
+           0       0.99      0.99      0.99      4831
+           1       0.99      0.99      0.99      4862
+
+    accuracy                           0.99      9693
+   macro avg       0.99      0.99      0.99      9693
+weighted avg       0.99      0.99      0.99      9693
