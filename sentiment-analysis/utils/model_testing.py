@@ -61,9 +61,29 @@ Testing the Naive Bayes model
 """
 Testing the SVM
 """
-# Load the trained SVM
-model = load('svm_model.joblib')
+# # Load the trained SVM
+# model = load('svm_model.joblib')
+#
+# # Test the model
+# y_pred = model.predict(X_test)
+# print("Test Classification Report:\n", classification_report(y_test, y_pred))
+
+"""
+Testing the hyperparameter tuned RNN model
+"""
+# Tokenize the text data
+tokenizer = load('tokenizer.joblib')
+X_test_seq = tokenizer.texts_to_sequences(X_test)
+
+# Pad the sequences to ensure uniform input size
+maxlen = 100
+X_test_pad = pad_sequences(X_test_seq, maxlen=maxlen)
+
+# Load the trained RNN model
+model = load_model('best_rnn_model.keras')
 
 # Test the model
-y_pred = model.predict(X_test)
-print("Test Classification Report:\n", classification_report(y_test, y_pred))
+y_pred = model.predict(X_test_pad)
+y_pred_binary = (y_pred > 0.5).astype(int)
+print("Test Classification Report:\n", classification_report(y_test, y_pred_binary))
+
