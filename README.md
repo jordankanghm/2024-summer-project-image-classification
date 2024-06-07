@@ -13,10 +13,10 @@ I have done three projects: Image Classification, Stock Price Prediction, and Se
     pip install -r requirements
     ```
 
-3. **Navigate to the UI directory**: Go to the `ui` directory of any of the three subdirectories.
-   e.g.
+3. **Navigate to the UI directory**: Go to the `ui` directory of the image-classification and sentiment-analysis directories.
     ```bash
     cd image-classification/ui
+    cd sentiment-analysis/ui
     ```
 
 5. **Run the application**: Execute the following command to start the application.
