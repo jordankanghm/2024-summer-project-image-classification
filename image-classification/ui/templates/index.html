@@ -11,13 +11,18 @@
             text-align: center;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
         h1 {
             color: #333;
             margin-bottom: 20px;
         }
         form {
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
         input[type="file"] {
             padding: 10px;
@@ -28,6 +33,9 @@
             color: #333;
             cursor: pointer;
             transition: all 0.3s ease;
+            width: 50%;
+            display: inline-block;
+            vertical-align: middle;
         }
         input[type="file"]:hover {
             border-color: #666;
@@ -41,13 +49,21 @@
             font-size: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
+            margin-left: 10px;
         }
         input[type="submit"]:hover {
             background-color: #45a049;
         }
         h2 {
             color: #333;
-            margin-top: 20px;
+            margin-top: 40px;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+            margin-bottom: 20px;
+            width: 80%;
+            text-align: center;
         }
         a {
             text-decoration: none;
@@ -62,12 +78,12 @@
 </head>
 <body>
 <h1>Upload an Image for Prediction</h1>
+<p>Welcome to the MNIST Handwritten Digits Prediction tool! This tool uses a model trained on the MNIST dataset to predict handwritten digits. You can upload your own handwritten digits or select from the test images provided below.</p>
 <form method="post" enctype="multipart/form-data">
     <input type="file" name="file">
-    <br>
     <input type="submit" value="Upload">
 </form>
-<h2>Or select a test image:</h2>
+<h2>Select a test image:</h2>
 <a href="{{ url_for('select_test_image') }}">Select Test Image</a>
 </body>
 </html>
