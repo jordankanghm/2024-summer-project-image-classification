@@ -5,7 +5,7 @@ I have done three projects: Image Classification, Stock Price Prediction, and Se
 ## Start up
 1. **Clone the repository**: Pull the remote repository into your local repository.
     ```bash
-    git clone https://github.com/jordankanghm/2024-summer-projects.git
+    git clone https://github.com/jordankanghm/2024-summer-projects-1.git
     ```
 
 2. **Install dependencies**: Navigate to the project directory and install all dependencies listed in the requirements file.
