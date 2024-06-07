@@ -1,6 +1,35 @@
 # 2024-Summer-Machine-Learning-Project
 This repository stores all machine learning projects I have worked on during the summer of 2024.
-I plan to do three projects: Image Classification, Stock Price Prediction, and Sentiment Analysis. The dependencies for all projects can be found in the requirements file.
+I have done three projects: Image Classification, Stock Price Prediction, and Sentiment Analysis.
+
+## Start up
+1. **Clone the repository**: Pull the remote repository into your local repository.
+    ```bash
+    git clone https://github.com/jordankanghm/2024-summer-projects.git
+    ```
+
+2. **Install dependencies**: Navigate to the project directory and install all dependencies listed in the requirements file.
+    ```bash
+    pip install -r requirements
+    ```
+
+3. **Navigate to the UI directory**: Go to the `ui` directory of the image-classification and sentiment-analysis directories.
+    ```bash
+    cd image-classification/ui
+    cd sentiment-analysis/ui
+    ```
+
+5. **Run the application**: Execute the following command to start the application.
+    ```bash
+    python app.py
+    ```
+
+6. **Open your browser**: Go to the following URL to access the application.
+    ```
+    http://127.0.0.1:5000/
+    ```
+
+7. **Test the model**: Feel free to try out any inputs to test the model.
 
 ## Image Classification
 I decided to conduct image classification on the MNIST dataset comprising handwritten digits. The dataset consists of 60,000 training and 10,000 testing images and labels. The image-classification directory shows all the work I have done, including data preprocessing, training and testing models, and hyperparameter tuning. The final model produced the following test scores.
