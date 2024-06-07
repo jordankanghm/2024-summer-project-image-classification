@@ -2,9 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sentiment Analysis</title>
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+            width: 80%;
+            margin: 0 auto;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 20px auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-$END$
+<h1>Sentiment Analysis</h1>
+<p>Welcome to my Sentiment Analysis tool! This tool uses a model trained on Amazon product reviews to determine whether a given review is positive or negative. Feel free to type your own review in the text box below and see the result!</p>
+<form id="reviewForm" method="post">
+  <textarea id="reviewInput" name="review" placeholder="Type your review here..."></textarea><br>
+  <button type="submit">Submit</button>
+</form>
+<script>
+    document.getElementById("reviewInput").addEventListener("keydown", function(event) {
+        if (event.keyCode === 13 && !event.shiftKey) {
+            event.preventDefault();
+            document.getElementById("reviewForm").submit();
+        }
+    });
+</script>
 </body>
 </html>
